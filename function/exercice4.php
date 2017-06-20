@@ -12,7 +12,9 @@ function compare($a, $b){
 }
 
 compare(1,2);
+
 compare(4,3);
+
 compare(5,5);
 
 
