@@ -11,11 +11,11 @@ function compare($a, $b){
   }
 }
 
-compare(1,2);
+compare(1,2) "\n";
 
-compare(4,3);
+compare(4,3) "\n";
 
-compare(5,5);
+compare(5,5) "\n";
 
 
  ?>
