@@ -5,7 +5,7 @@
 <a href="bonjour.php?dateDebut=02/05/2016&amp;dateFin=27/11/201">dates</a>
 
 <p>exercice 4</p>
-<a href="bonjour.php?langage=PHP&amp;serveur=LAMP">language et serveur</a>
+<a href="bonjour.php?langage=PHP&amp;server=LAMP">language et serveur</a>
 
 <p>exercice 5</p>
 <a href="bonjour.php?semaine=12">semaine</a>

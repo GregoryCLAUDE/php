@@ -25,20 +25,30 @@ else
 
 if(!isset($debut) && !isset($fin))
 {
-  echo "Veuillez renseigner les dates";
+  echo "Veuillez renseigner les dates"."<br>";
 
 } elseif(!isset($fin))
 {
   echo "Veuillez renseigner une date de fin"."<br>";
 }elseif (!isset($debut)){
-  echo "veuillez renseigner une date de debut";
+  echo "veuillez renseigner une date de debut"."<br>";
 }else {
   echo "Vous avez commencé le ". $debut ." et vous terminerez le ".$fin."<br>";
 };
 
 
-if (isset($langage) & ($server)){
-  echo "Vous utilisez ".$langage. " sur le serveur ".$server. ".";
+if (isset($langage) && isset($server)){
+  echo "Vous utilisez ".$langage. " sur le serveur ".$server. "."."<br>";
+}else{
+  echo "pas de language? pas de serveur, Mais bien sûr! Et la marmotte....";
 }
+
+if (isset($semaine)){
+  echo "Nous sommes en semaine ". $semaine. "."."<br>";
+} else {
+  echo "Je ne sait pas , je ne sait plus, quand nous sommes.";
+}
+
+
 
  ?>
