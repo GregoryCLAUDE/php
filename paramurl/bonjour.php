@@ -12,7 +12,7 @@ $langage = $_GET["langage"];
 $server = $_GET["server"];
 $semaine = $_GET["semaine"];
 $batiment = $_GET["batiment"];
-$salle = $_["salle"];
+$salle = $_GET["salle"];
 
 if(isset($age))
 {
@@ -40,15 +40,23 @@ if(!isset($debut) && !isset($fin))
 if (isset($langage) && isset($server)){
   echo "Vous utilisez ".$langage. " sur le serveur ".$server. "."."<br>";
 }else{
-  echo "pas de language? pas de serveur, Mais bien sûr! Et la marmotte....";
+  echo "Pas de language? pas de serveur, Mais bien sûr! Et la marmotte...."."<br>";
 }
 
 if (isset($semaine)){
   echo "Nous sommes en semaine ". $semaine. "."."<br>";
 } else {
-  echo "Je ne sait pas , je ne sait plus, quand nous sommes.";
+  echo "Je ne sait pas , je ne sait plus, quand nous sommes."."<br>";
 }
 
-
+if (!isset($batiment) && !isset($salle)){
+  echo "Debrouille toi"."<br>";
+}elseif(!isset($salle)){
+  echo "Je sait pas dans quelle salle mais tu es dans le batiment ".$batiment. "<br>";
+}elseif(!isset($batiment)){
+  echo "T'as plus qu'a faire toutes les salles ".$salle. " de tous les batiments". "<br>";
+}else {
+  echo "Tu es dans la salle ".$salle. " du batiment ".$batiment." ."."<br>";
+}
 
  ?>
