@@ -22,7 +22,8 @@
         nom : <input type="text" name="nom" value="">
         prenom : <input type="text" name="prenom" value="">
 
-        <button type="submit" name="button">envoyer</button>
+        <button ty
+)pe="submit" name="button">envoyer</button>
     </form>
 <form class="" action="user.php" method="post" enctype="multipart/form-data">
   <p>Form in post</p>
@@ -39,7 +40,7 @@
     <button type="submit" name="button">send</button>
 </form>
 <?php
-  if (empty($name)||empty($firstname)) {
+  if (empty($name) OR empty($firstname) OR $fileType != "pdf") {
 echo "
     <form action='index.php' method='post'>
       <p>Form </p>
