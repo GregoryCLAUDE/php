@@ -33,7 +33,19 @@ echo $_SESSION["firstname"]." " .$_SESSION["name"]." tu as ".$_SESSION["age"]." 
 
 ?>
 
+  <a href="target.php?<?php echo htmlspecialchars(SID);?>">pour continuer</a>
 </div>
-     <a href="target.php?<?php echo htmlspecialchars(SID);?>">pour continuer</a>
+<div class="container">
+  <?php
+setcookie("name","dalors" );
+setcookie("firstname", "omer");
+setcookie("age", 23);
+
+echo $_COOKIE["name"];
+
+   ?>
+<a href="cookies.php?<?php echo htmlspecialchars(SID);?>">page des cookies</a>
+</div>
+
   </body>
 </html>
