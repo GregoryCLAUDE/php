@@ -10,9 +10,10 @@
    $fname = $_GET["prenom"];
    $nom = $_POST["name"];
    $prenom = $_POST["firstname"];
+   $civility = $_POST["civility"];
 
-      echo "Bonjour ".$fname. " ". $name."."."<br>";
-      echo "Hello ". $nom. " " .$prenom."."."<br>";
+      echo "Bonjour ".$civility." ".$fname. " ". $name."."."<br>";
+      echo "Hello ".$civility. " " .$nom. " " .$prenom."."."<br>";
 
     ?>
   </body>
