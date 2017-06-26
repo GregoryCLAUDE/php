@@ -1,3 +1,10 @@
+
+<?php
+setcookie("login", $_POST["login"] );
+setcookie("password", $_POST["password"]);
+$_COOKIE["login"] =  $_POST["login"];
+$_COOKIE["password"]= $_POST["password"]  ;
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,13 +14,13 @@
   <body>
 
     <?php
-    if(isset($_COOKIE["cookie"])){
-      foreach ($_COOKIE["cookie"] as $name => $value) {
-        $name = htmlspecialchars($name);
-        $value = htmlspecialchars($value);
-        echo " $name : $value <br />\n";
-      }
-    }
+    $login = $_COOKIE["login"];
+    $pwd= $_COOKIE["password"];
+    username : echo "nom : ".$login ."<br/>";
+    password : echo "password : ".$pwd ."<br/>";
+
+
     ?>
+    <a href="sendcookie.php" type="button" >retour</a>
   </body>
 </html>
