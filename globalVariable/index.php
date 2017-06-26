@@ -6,23 +6,28 @@
   </head>
   <body>
 
-    <div class="container">
+
+<div class="container">
     <?php
 //exercice1//
-    $info = $_SERVER["SERVER_ADDR"];
+    $info = $_SERVER["REMOTE_ADDR"];
     $server = $_SERVER["SERVER_NAME"];
     $session = $_SERVER["HTTP_USER_AGENT"];
+    ?>
+</div>
 
+<div class="container">
+  <?php
     global $user;
     $user= array( "name"=> "Dalors", "firstname"=>"omer","age=>24");
-    echo $session ."<br/>";
-    echo $info ."<br/>";
-    echo $server."<br/>";
+    echo "user agent : ".$session ."<br/>";
+    echo "ip : ".$info ."<br/>";
+    echo "server name : ".$server."<br/>";
     ?>
-  </div>
+
+</div>
+
 <div class="container">
-
-
   <?php
 //exercice 2//
 session_start();
@@ -35,17 +40,9 @@ echo $_SESSION["firstname"]." " .$_SESSION["name"]." tu as ".$_SESSION["age"]." 
 
   <a href="target.php?<?php echo htmlspecialchars(SID);?>">pour continuer</a>
 </div>
-<div class="container">
-  <?php
-setcookie("name","dalors" );
-setcookie("firstname", "omer");
-setcookie("age", 23);
 
-echo $_COOKIE["name"];
+<a href="sendcookie.php">cookies de jordan</a>
 
-   ?>
-<a href="cookies.php?<?php echo htmlspecialchars(SID);?>">page des cookies</a>
-</div>
 
   </body>
 </html>
