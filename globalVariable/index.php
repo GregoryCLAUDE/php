@@ -1,3 +1,8 @@
+<?php
+session_start();
+ ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,9 +15,10 @@
 <div class="container">
     <?php
 //exercice1//
+    $session = $_SERVER["HTTP_USER_AGENT"];
     $info = $_SERVER["REMOTE_ADDR"];
     $server = $_SERVER["SERVER_NAME"];
-    $session = $_SERVER["HTTP_USER_AGENT"];
+
     ?>
 </div>
 
@@ -30,7 +36,6 @@
 <div class="container">
   <?php
 //exercice 2//
-session_start();
 $_SESSION["name"]= "dalors";
 $_SESSION["firstname"]= "Omer";
 $_SESSION["age"] = "24";
